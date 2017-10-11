@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kamin's Personal Website</title>
+    <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicon2/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicon2/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicon2/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicon2/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicon2/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicon2/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicon2/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicon2/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon2/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/favicon2/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon2/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon2/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon2/favicon-16x16.png">
+  <link rel="manifest" href="/favicon2/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- End Of Favicon -->
+  <link rel="stylesheet" type="text/css" href="../styles.css">
+  <script type="text/javascript" src="scripts.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+<!-- Page Header -->
+  <div class="Page-Header cf">
+    <div class="Page-Title">
+      <div class="Header-Main-Title activeL">
+        Kamin Day
+      </div>      
+      <div class="Header-Sub-Title">
+        Student @ Omaha Code School
+      </div>
+    </div>
+<!-- Header Adjustments for larger displays -->
+    <div class="Wide-Navigation-Links">   
+      <a class="Nav-Link activeL" href="article-index.html">ARTICLES</a>        
+      <a class="Nav-Link activeL" href="about.html">ABOUT</a>   
+    </div>
+    <div class="wide-buttons">  
+      <a href="#"><img src="/images/twitter.svg" class="navThumb" alt="Twitter"></a>
+      <a href="https://github.com/Kamin-Day"><img src="/images/GitHub-Mark-32px.png" class="navThumb" alt="GitHub"></a>
+      <a href="#"><img src="/images/feed.png" class="navThumb" alt="feed"></a>
+    </div>
+<!-- Hamburger Menu Button -->
+    <div class="Hamburger-Holder">
+      <img id="Hamburger-Button" src="/images/burger.png" alt="Navigation Display Button - Visual">
+    </div>
+  </div>
+<!-- Drop Down Navigation Menu -->
+  <div class="Content-Navigation cf" style="margin-top: -500px">
+    <div class="Navigation-Icons">
+      <a href="#"><img src="/images/twitter.svg" class="navThumb" alt="Twitter"></a>
+      <a href="https://github.com/Kamin-Day"><img src="/images/GitHub-Mark-32px.png" class="navThumb" alt="GitHub"></a>
+      <a href="#"><img src="/images/feed.png" class="navThumb" alt="feed"></a>
+    </div>
+    <div class="Navigation-Links">    
+      <a class="Nav-Link activeL" href="article-index.html">ARTICLES</a>        
+      <a class="Nav-Link activeL" href="about.html">ABOUT</a>
+    </div>
+  </div>
+<!-- Hero Image -->
+  <div class="hero-img">    
+  </div>
+<!-- Content Begins -->
+  <div class="Content">
+    <div class="article-content">
+
+
+  
+<h1 class="article-title"> Making an interactive Mondrian Canvas Web App </h1>
+<h2> (with the option to save and load your artwork)</h2>
+
+<p> In this tutorial I will show you how to make a basic web application running on a Sinatra(Ruby) server. We will be using Ruby with the "Sinatra Gem", Javascript, and of course, since it is a web application, HTML and CSS.</p>
+
+<img src="/images/mondrian2.png" alt="What we'll be making">
+
+
+<p> If you don't already have Sinatra installed, you can find <a href="http://www.sinatrarb.com"> information on it here</a>.</p>
+<h3>
+Or more simply, type this line into your Terminal to begin installation.</h3>
+<script src="https://gist.github.com/Kamin-Day/1bbbd372d71369a4fe7ff554f9a9ae5d.js"></script>
+<h3>Don't have ruby?</h3>
+<script src="https://gist.github.com/Kamin-Day/8ceb17dba97b2e55ea4f13e42a6667ce.js"></script>
+
+<p>
+Assuming you may already be a little familiar using Javascript, or at least what it can do as a client-side language (where its code is executed in the clients browser 100% locally), you may be wondering why we need to use a server-side language (our Ruby with Sinatra), to complete this little project at all. Simply, the answer is, we don't! However, once we get the canvas up and running using Javascript, we will be adding some extra functionality to save and load your artworks, this is where Ruby comes in. We'll be generating a "code" to represent the color scheme you've made, and sending that to our server to process and store. Similarly, we'll be asking the server to retrieve this information and send it back to the browser to load our paintings 'back to life', but this all comes at the end. Either way, lets get started.</p>
+
+<h2 id="setup"> Setup </h2>
+<p> 
+Lets start by setting up our work-space. Since we WILL be using ruby before we are done, we're going to get everything running on our Sinatra server from the get-go. This way, we won't have to come back to change and rearrange our files when the time comes later.</p>
+
+<p> 
+Working on a Sinatra server does have some differences than working with only HTML, CSS, and JavaScript. For instance, we won't even be using .HTML files. Sinatra uses something called a .ERB, or <i><strong>E</strong>mbedded <strong>R</strong>u<strong>b</strong>y document</i>. This works just like a normal .HTML file, but with some added functionality, allowing us to embed bits of Ruby code to run within the page. More on that later</p>
+
+<p>
+<strong>I've created a GitHub repository with all the stuff you need to get started in it <a href="https://github.com/Kamin-Day/tutorial-mondrian">HERE</a>. Go ahead and clone that, or just follow the 5 steps below.</strong></p> 
+<ol>
+  <li> Create a project folder. I'll call mine "Mondrian", but any name is fine.</li><br>
+  <li> Inside your project folder, add some folders. "public" and "views". Make sure these are not uppercase.  <i>These folders are very important working with Sinatra. "views" will contain our .erb files, and public will hold some of our other resources, like your CSS and JavaScript files.</i></li>
+  <li>Make a Ruby file - Create a blank text document, save it as "main.rb" - make sure to save this file in your root folder. Mine would be "Mondrian". It should look like this..<script src="https://gist.github.com/Kamin-Day/0fbff7319767de38d8e53dfba0cfeddb.js"></script>
+  Right now, this file won't be doing much. However, we will have to run it to start up our local server. Its main responsibility, for now, is to display our index.erb. (the get "/" do) part, saying that when "/", or our index is requested in the browser, respond with our index.erb. Lets make that next.</li>
+  <li>Create another blank text file. Call this one index.erb and save it in your "views" folder. We've got some HTML and CSS to get us started, so copy and paste this into your .erb <script src="https://gist.github.com/Kamin-Day/1faab207156c3b6a0d0700c1fc60a62a.js"></script></li>
+
+  <li>Okay, great. Now your CSS. Copy and paste the this code in another blank file, then save it as mondrian.css. Its important that you save this into your "public" folder, otherwise it won't be read. 
+  <script src="https://gist.github.com/Kamin-Day/63697c63cc878e0a1b52d981e1b516dc.js"></script></li>
+</ol>
+
+<p>Great! Now start up your server. Navigate to your project folder in terminal (the one containing your main.rb and other folders). Once you're there, type "ruby main.rb" into the terminal window.. some code should run and you will see a message confirming your localhost has been started on some port. Mine was 4567. Go to http://localhost:4567, or your port number in your web-browser and you should now see your blank canvas awaiting you!</p>
+
+<h2 id="start"> Alright! Lets start writing some code</h2>
+<p><strong>Before we get started, take a second to look at some of the code you've been provided</strong>. You'll see a bunch of different classes in your HTML code, which will be an important part of what we'll be using to accomplish our goals. By adding event listeners, we will manipulate properties of the <strong>D</strong>ocument <strong>O</strong>bject <strong>M</strong>odel<strong>(DOM)</strong> in order to paint our soon to be beauitified canvas. <strong>Open your scripts.js</strong>, located in your public folder.</p>
+
+<h2>Javascript</h2>
+<p>Javascript will be responsible for the majority of our functionality. Lets start by adding a simple event listener. Go ahead and get this into your JS file (if you didn't clone my GitRep and its not already there.)</p>
+<script src="https://gist.github.com/Kamin-Day/bd73a24de912b1284279044fcc8602a3.js"></script>
+<p>This is our first event listener. We'll be using these quite a bit within our JS. This bit of code is saying, okay, lets add an event listener to the "window". When this event happens, do some stuff in this function. This particular listener is for "load", meaning that, when the page, or "window", has loaded, this function will run. There are lots of different types of events we can listen for, things like keystrokes, clicks, etc, and we can apply them to just about anything within our page. Anyways, the rest of our JavaScript code will go inside this EventListener function.</p>
+<h3> Chosing a color</h3>
+<p>
+ Lets make another "Event Listener". We need to be able to pick a color from the palate in order to paint with it. Our next goal is to create an Event Listener that says, whenever we click on one of our color options, it will somehow figure out what color it is, and set that to our current color so that we can paint with it. Remember, this code goes INSIDE of the window on load listener we have already created.</p>
+<script src="https://gist.github.com/Kamin-Day/b9b3a3fa4cc6aa89602511d44d429c68.js"></script>
+<p> Here we have 3 variables. "curColor", which will store the current color we have selected to paint with. The other 2 look a little different - these variables store functions.</p>
+<ul>
+	<li> "setColor" is a function that, when called, will set our first variable "curColor" to the id of the event.target, which in this case, will be one of the colors on the palette. If you observe the HTML code, you will find that these elements have both a class, "color", and an id, which is either "red", "blue", "yellow", or "white". These are just identifiers, but as it turns out, those string values also represent standard colors which can be applied in various ways using CSS.</li>
+	<li>Our last variable, "colors", is also a function. It does a little more than the other 2. First, by calling "getElementsByClassName" on the document, it will make an array of all of the DOM elements in our page that are of a particular class. We have specified "color", which is the class of each color square in our palette. ("The same ones that had the id's "red", "white", "blue", and "yellow"). Next we see a loop. This loop will is made to go through each element in our array "colors", and to each, call a function "addEventListener". We've used this once already, in our first line of code. These event listeners are different though, with a parameter "click", instead of load. As you could guess, these event listeners will look for a "click" event to occur on any of the DOM elements with a class of "color". When a click is observed, it will call our variable "setColor", which, like we've already noticed, refers together a function.</li>
+<p>
+So, putting it all together.. We've just made some pretty simple code that will "listen" for a click event on the elements of class "color". When a click event is recognized on one of these elements, it will call a function to set our "curColor" variable to equal the "id" of the events target, ("event.target"). JavaScript has a cool ability to store and pass information about these different events around, allowing us to easily track and manipulate information in ways that isn't possible using plain HTML and CSS.</p>
+<p>
+Great! Now we can select our color. Try using some debuggers; in your code to follow the data and see how it works. Anyways, now that we can choose a color to paint with, lets add a little more code to do just that - paint our canvas!</p>
+<script src="https://gist.github.com/Kamin-Day/fa38a22f7a55a9b6f46f708c57120e76.js"></script>
+<p>
+Now we've added two more variables and another loop. They made look pretty similar to the code we already have, and thats because they are. Once again, we set another variable to a function "getElementsByClassName" which is called onto the document. We've given it a different parameter this time, "row". This will return an array of all of the DOM elements in document with a class of "row", which will be stored in our variable "rows". Below that, you'll see we've created another loop almost identical the the one we've already made. It says, for each item in our array "rows", add another "click" event listener, which when activated, will refer to our other new variable "paint", which refers to another simple function. </p>
+<p>
+If you havent yet, take another look at the HTML we are working with. You will see quite a few items with the class of "row", and some id. These elements make up the squares of our canvas, with the help of a little CSS to make them look nice. If you've done everything right so far, all of these elements will now also be looking for any click events which may be directed at them. Moving onto our variable "paint", which holds our last function..</p>
+<p>
+Just like the function stored in "setColor", our "paint" function will be passed some information about click event, refered to by event. This collection of data has lots of information in it that we don't need, but it does have all the stuff we DO need as well.</p>
+<p>
+Anyways, this function works a lot like the one stored in "paint", except instead of setting a variable to be equal to a property of the target of an event, we will be changing the value of a property of the target of our click event (one of the boxes of the class of "row").</p>
+<h3>
+Lets look at this code. Remeber, you can add debuggers and explore this data more in the console of your browser while it runs..</h3>
+
+<p>
+"event.target.style.backgroundColor = curColor;"
+</p>
+<p> Okay, so as we already know... "event.target" refers to the target of our event, some particular element with a class of "row". Next, the ".style" refers to some CSS styling properties, in this case ".backgroundColor", the background color of an object. This code will set this property of that element <strong> equal to, ("=")</strong> something called "curColor". Remember that? The fist variable we made, which should hold a value of "red", "blue", "white", or "yellow" as the result of our earlier functions. As I mentioned, these are all valid values for a background color within CSS. Good work! We've just painted a square in our canvas. 
+
+<h2> Thats it!</h2>
+<p>With only a small ammount of simple code, we were able to observe events are various parts of the DOM, as well as read and manipulate thier properties in some ways or another using event targets and some of those other properties we worked with. This is all you need to create your art work. Moving on, we will create some more JavaScript code to format some data which will represent the colors in the painting, use some Http requests to send this data to our Sinatra server to be saved as a result of some ruby code we'll make, and to request some date to returned from our server in order to load paintings which were saved in the past using a similar approach. </p>
+
+
+<h2> Saving to the server.</h2>
+<p> In order to save our painting, we'll need some way to tell our web-page that that is something we would like to do. Notice the little save button on the bottom left of the webpage? You'll find that right now its just a link, which is strange.. we don't want to leave the page, we want to do some other stuff.. Clicking it now will try to send you to some place, send a request for some other page, load it, and cause you to lose your work. Thats not what we want! </p>
+
+<p>
+We can get around this. We'll start by creating a new event listener for that button. See if you can figure it out by looking at the code we already have and maybe a quick google about working with DOM elements. It shouldn't be too hard, but if you can't figure it out, copy the code below.</p>
+
+<script src="https://gist.github.com/Kamin-Day/067e69e021cfb46e8c1bd641eda2bee6.js"></script>
+<p>
+This time we selected the element using a different function, "getElementById("")". Like before we added event listener looking for some clicks, and some stuff to do when it finds that event to have occured. In my code above, you'll see something that may be new to you... "event.preventDefault();". This wonderful bit of code will prevent the default function of some event, in this case, a click on our link. Now we don't have to worry about being sent of to some other page and losing our work. The link is now just some button for us to click on to execute other code.</p>
+<p>
+Additionally, "savePainting(event);" calls on some other function (One we havent made yet) and sends it some information about the event.</p>
+
+<p>
+Lets start making that function now. We know were going to have to communicate with our server at somepoint to send it some data to store. Lets not worry about that yet, and see if we can at least send some request to the server and get some sort of response. Let's talk about this code. You'll need it so go ahead and copy/paste.
+</p>
+<script src="https://gist.github.com/Kamin-Day/19a4ae8cef74025d964c75355b81fc3e.js"></script>
+<p>
+Here we see the function that is called when our "save button" is clicked. Within it is something new, a variable referencing something called a new XMLHttpRequest();, followed by some stuff. This "request" is how we will comunicate with our server.</p>
+
+<p><strong>request.open("POST", "/save_painting");</strong></p>
+
+<p>
+This bit tells our request where it will be sent. We specify it a thing called "POST", which is the type of communication that will be sent. We could use something like "GET", which you may have noticed earlier in our main.rb file. "POST" is very similar, but the communicate is more private. We also passed it "/save_painting", which is the location/address of the method. Next, we have "request.send()", which, as you may have guessed, sends our request to where ever its been told to go. Lastly, we add an event listener to the request with "request.addEventListener("load", alert_Save_Success)". This is basically saying that, if and when the request receives it's reply from our server, run some function which we have below. This way we know our communication was successful. The function we call is a simple alert from the web browser to let you know everything went as intended. If you try sending this request now, you'll notice our alert never appears. This is because to location we've sent our request to doesnt exist yet! No worry, lets open up our main.rb file and fix this.
+</p>
+
+
+<h3>
+Add this code below your "GET" controller. This is where our request will be sent.</h3>
+<script src="https://gist.github.com/Kamin-Day/74bb560fa2dd76eb7c8eb689bef9800a.js"></script>
+<p>
+If you try now, you should see an alert saying your request was successful. Now that we have somewhere to send our request, lets go back to our JavaScript and prepare some data to send to our server.</p>
+
+<p>Add the new code to your function, and be sure to make the addition to the request.open () method, adding the "+ data" after the address. This is important, as "data" will be a string that contains our save information, which we will pass as a ruby param (a hash of keys and values built in to ruby).</p>
+<script src="https://gist.github.com/Kamin-Day/b0c86a650c716a904ae355221f799fcc.js"></script>
+<p>
+Lets take a look at the loop we have here. It is saying, for each items in rows, our list of items with the class of row (the squares in our canvas), take the first character of the value of its style.backgroundColor attribute, and then add it to some string (var boxColors). After this loop is finished, string should be 16 characters in length, either "w", "b", "y", or "r". these characters will represent the colors in each part of the canvas. Then, we make a new string, "data". This string is "?saveArt=" along with the string of letters we just made. The first part will represent the name of our key within params once it is sent to ruby, with the boxColors string being its value</p><p>
+var data = "?saveArt=" + boxColors. </p>
+<p>
+With this complete, we can now send more than just an empty request to our server. Now, we can send it some data in the form of a key-value pair which will be accessible from a params hash within ruby. Great! Lets go back to our ruby file to write some code to save this information to a file.
+</p>
+<h3>Add to your ruby code untill it looks like this.</h3>
+<p>
+<script src="https://gist.github.com/Kamin-Day/0c9933e6b1d7edc35619cf81928777b1.js"></script>
+<p>
+We'll talk about that in a second, but before we do, we need to create a new file. Notice the bit about an erb at the end of our post method? It refers to a file that doesn't exist yet. Create a blank text file and paste in the following code.</p>
+<script src="https://gist.github.com/Kamin-Day/049d2edc46412bac9f17dce33f3738f8.js"></script>
+<p>
+Now save this file as "imgsaved.erb"<strong>MAKE SURE you save it inside of the "views" folder.</strong> If you put it anywhere else, Sinatra won't be able to find the file and things won't work. We also need one more file, a text file to save our data in. If you cloned my gitRepository earlier, you already have it. If not, make a new text file. Enter the following text, save it as "saves.txt" in your main project folder.</p>
+<script src="https://gist.github.com/Kamin-Day/dbbc5601fee75d56d3a6fda0e004e3cf.js"></script>
+<p> You don't need the second line, its just there as an example of what our saved artworks will look like in their little data musuem.</p>
+
+<p>
+Now that everything is set up, lets take a quick look at the code in our "POST" method. It's pretty simple. It gets the data we sent out of the params hash and stores it in a variable, and adds that onto the end of another string containing the current time when the save was being done. This string will look something like the example one in our text file, although the letters may be different. Lastly, it opens our text file, appends a new line to the bottom, which contains the string with just made. A time (some way to identify which save is which), and the data which represents the color scheme.
+</px<h2> Nice work!</h2>
+<p> You just created a beautiful work of art, sent some data about it to a server, and saved that information in a file to access at a later point. Pretty cool, huh?</p>
+
+<h2> Loading Images </h2>
+<p>Below is the rest of the code required to load paintings from the server and apply them to your canvas via DOM manipulation. </p>
+
+<p>Using another Http Java request to the server, we will be retreiving the data we saved amnd handling it with JavaScript to "load" a previous painting. This will require a little more work than it did for us to save our images, as we will want to have a way to dynamically display all the saves which are available to load, and request one specifically. Lets start by doing this.</p>
+
+<p>Start by making a new text file, and save it as "functions.rb" in your project folder if you do not already have one. Don't forget to add this line of code to the top of your "main.rb" file, so our server will know where to find the contents of this file.</p>
+<script src="https://gist.github.com/Kamin-Day/30ff50e2b4cadd0166315e3826ab8ad0.js"></script>
+ <p> Now, back in our "functions.rb" file, we will write a function which will return our generated list of saves to select from in the form of a HTML drop down menu in a submitable form. Our function will look like this.</p>
+
+
+<script src="https://gist.github.com/Kamin-Day/e1071076dec9099ea1c6e7bd9a4d4ffa.js"></script>
+<p> Essentially, this code is storing the information in our saves file to various arrays, and them putting the textual information as options in our HTML element, and then returning that entire element. Since we are using ".erb", or "embedded ruby files", we can add some code within our HTML to call this function and display the information it returns. Since our return will be in HTML format, our page will now display a somewhat un-attractive, yet funtional drop down form. </p>
+<h3>Add this somewhere in your "index.erb"</h3><p>Just put it where you see mine for now, right inside the "spacer_container" div</p>
+<script src="https://gist.github.com/Kamin-Day/bb6e8f7dd0325677fe9a1e6c744972c3.js"></script>
+<p> Great! Now we have a list of saves we can choose from. For now, all it does is show them to us though, lets fix that by adding a new method in our "main.rb" file.</p>
+
+<p>Below your "GET" handler, add this code. You don't need to add the "require relative" bit again if you already have. </p>
+
+ <script src="https://gist.github.com/Kamin-Day/ed39415ec73e5783906123e2f076d1ce.js"></script>
+<p>Wonderful. Since our embedded ruby function has already provided the HTML required for our submit button to a POST method with this address, we can know start the server-side portion of sending our data back to the browser. the POST '/load_paiting' do part is the address, below that we grab our request (which was also sent as some params) and store that information in a variable. Then, below that, we call some function with that information as its arguement. We don't have this function yet, but eventually the information it returns will be what is sent back to the browser for our Javascript to handle.</p>
+<p> Let's go into our "functions.rb" file and create that function now. Add this code into your file.</p>
+<script src="https://gist.github.com/Kamin-Day/31fc7c4569639c3ded607efa5500a12c.js"></script>
+<p>This is pretty simple stuff. All this function is doing is reading back through our file and checking if each entry has the identifier, "date", we specified when we hit submit. If/when it does, it store that information in a variable and returns it!</p> 
+
+<p> Now that our browser has this information, we need some javascript to handle it. Lets add some more code to our Javascript to finish loading our image. In your "scripts.js" file, add the following.</p>
+<script src="https://gist.github.com/Kamin-Day/6c8c6c034984070ec83491ce367dd275.js"></script>
+<p> So, we have to functions here. One of which argues with what I said above slighty, but never mind that. The first is responsible for actually sending our request and recieving it's response. Whats its response has been recieved, it will pass that information onto the second function, "refillCanvas". What this function is doing is gathering up all of our 'row' elements again, and then, for each one, it will read a character from the response we recieved and apply its corresponding color to that element. since our "e" index represents the row and the character in the same fashion as when our data was created, we use it for both the loop and the character index. </p>
+
+<h2> All Done! </h2>
+<p> Great work! Have fun playing with your Mondrian artworks. I had just as much fun creating the code to maker this all work, and you feel like your learned something during this tutorial.</p>
+
+<h2> If you have any questions about what we covered here, feel free to head over to my "ABOUT" page and ask me yourself. I'll happily get back to you as soon as possible. Thanks!</h2>
+
+    </div>
+  </div>
+
+<!-- 
+Below is the rest of the code required to load paintings from the server and apply them to your canvas via DOM manipulation. 
+
+<br><br>
+More explination to come!
+<br><br>
+
+
+The Post Method + require relative to load
+  <script src="https://gist.github.com/Kamin-Day/ed39415ec73e5783906123e2f076d1ce.js"></script>
+
+Functions.rb
+<script src="https://gist.github.com/Kamin-Day/8673a0b25499d97296b764778bb80f62.js"></script>
+
+The Java to load
+<script src="https://gist.github.com/Kamin-Day/6c8c6c034984070ec83491ce367dd275.js"></script>
+
+Embedded Ruby in index.erb - calls a function to generate a list of saved images stored on the server and request them.
+<script src="https://gist.github.com/Kamin-Day/bb6e8f7dd0325677fe9a1e6c744972c3.js"></script>
+ -->
+
+
+</body>
+</html>

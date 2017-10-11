@@ -1,0 +1,317 @@
+/*Possible Color Scheme
+Navy Blue: #18121E
+Gun Metal: #233237
+Rusty Red: #984B43
+Warm Yellow: #EAC67A
+
+*/
+
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+	margin: 0;
+    font-family: 'Open Sans', sans-serif, "Helvetica", "Arial";
+    
+}
+
+
+
+/*#Content-Title*/
+
+.divide{
+    width: 100%;
+    height: 1px;
+    background-color: rgb(242,240,237);
+    margin: 25px 0px;
+}
+
+.BT {
+	background-color: rgb(7,36,78);
+    padding:0px;
+}
+
+.Left-Top-Img {
+	float: left;
+    height: 160px;
+    border-right: solid white 10px;
+}
+
+.Right-Top-Img {
+	float: right;
+	margin-top:25px;
+}
+
+.Page-Header-BT{
+	background-color: rgb(21,169,225);
+	position: relative;
+	z-index: 1;
+	padding-right: 25px;
+	margin-bottom: none;
+
+}
+
+.Header-BT{
+	text-align: center;
+	color:white;
+}
+
+.Tab-Divide{
+	position: inline;
+	width:100%;
+	text-align: center;
+	height: 40px;
+
+}
+
+.Tab-Divide {
+	
+}
+
+.Tab-Divide ul{
+	list-style-type: none;
+	text-align: center;
+}
+
+.Tab-Divide ul li{		
+	display: inline-block;
+	background-image: url("../images/BT/btcloud.png") no-repeat;
+	padding: 0px 8px;
+}
+
+.nav-button{
+	background: url("/images/BT/btcloud.png") no-repeat;
+	width:150px;
+	height:80px;
+	background-size: cover;
+	background-position-y: center;
+	padding-top:20px;
+	cursor: pointer;
+}
+
+.navThumb{
+	width:25px;
+	opacity: 0.25;
+    filter: alpha(opacity=25);
+	margin-right:7px;
+	transition: opacity	 0.5s ease;
+}
+
+.navThumb:hover{
+	width:25px;
+	opacity: 1.0;
+	filter:none;
+}
+
+a{
+	font-weight: bold;
+	color: rgb(7,36,78);
+	font-size: 1.25em;
+
+}
+
+.Hello{
+	background-color: rgb(21,169,225);
+	text-align: center;
+	height: 200px;
+	padding-top:25px;
+}
+
+.cloud{
+	background-image
+}
+.Hello h1{
+	color: white;
+	margin:none;
+	font-size: 2.5em;
+}
+
+.Hello h3{
+	color:white;
+	font-size: 1.25em;
+	padding:none;
+	margin:none;
+
+}
+
+.Header-Img{
+
+}
+
+.Content{
+	background: white;
+	position: relative;
+	padding: 20px;
+}
+
+.about{
+	position: relative;
+}
+
+.about h3 {
+	background-color: rgb(186, 236, 255);
+		/*background-color: rgb(195, 215, 247);*/
+	padding: 5px;
+	padding-left:10px;
+	border: solid rgb(7,36,78) 2px;
+}
+
+.me{
+	float:left;
+	width:45%;
+}
+
+.me h2{
+	text-align: center;
+}
+
+.you{
+	float:right;
+	width:45%;
+}
+
+.you h2{
+	text-align: center;
+}
+
+.examples{
+	text-align: center;
+	padding:15px;
+}
+
+.footer{
+	background-color: rgb(21,169,225);
+	width:100%;
+	height: 40px;
+	display: inline;
+}
+
+.underline_text {
+      border-bottom: solid 2px #000000;
+      display: inline;
+      padding-bottom: 3px;
+}
+
+@media (min-width: 570px) {
+	.flex {
+		display: flex;
+		justify-content: flex-start;
+	}
+	.Content{
+		padding: 20px;
+		margin:auto;
+		max-width: 900px;
+	}	
+	.article-subtitle{
+		text-align: left;
+	}
+
+	.article-content h2{
+		text-align: left;
+	}
+
+	.wrapper{
+		/*width:535px;*/
+
+	}
+	.article-preview {
+		/*width: 535px;*/
+		/*text-align:center;*/
+		margin:auto;	
+	}
+
+/*Possible Color Scheme
+Navy Blue: #18121E
+Gun Metal: #233237
+Rusty Red: #984B43
+Warm Yellow: #EAC67A
+
+*/
+
+	.article-preview-image{
+		width: 180px;
+		height: 180px;
+		background-color:rgb(244,242,240);
+		margin-right: 20px;
+		margin-top: auto;
+		margin-bottom: auto;
+		border: solid rgb(84,84,84) 1px;
+
+
+	}
+
+	.preview-link{
+		/*width: 66.6%;*/
+	}
+
+	.article-index{
+		text-align: left;
+		margin:auto;
+		width:550px;
+
+	}
+	.indexYear h2{
+		text-align: left;
+		float: left;
+	}	
+
+	.Page-Header{
+		background-color: rgb(244,242,240);
+		padding: 25px;
+		position: relative;
+		padding-bottom:25px;
+		z-index: 1;
+	}
+
+	.Header-Main-Title{
+		color: rgb(102,102,102);
+		font-size: 1.25em;
+	}
+
+	.Header-Sub-Title{
+		color: rgb(158,158,158);
+		font-size: .8em;
+	}
+
+	.Hamburger-Holder{
+		display:none;
+	}
+
+
+	.Wide-Navigation-Links{
+		display: block;
+		float: right;
+		padding-top: 10px;
+	}
+
+	.wide-buttons{
+		text-align: center;
+		display: block;
+		padding-top:10px;
+	}
+
+
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
