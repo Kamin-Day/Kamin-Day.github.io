@@ -1,3 +1,16 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+	margin: 0;
+    font-family: 'Open Sans', sans-serif, "Helvetica", "Arial";
+}
+
 .Page-Header{
 	background-color: rgb(64,64,64);
 	padding: 25px;
