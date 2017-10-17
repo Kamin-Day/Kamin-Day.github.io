@@ -13,10 +13,11 @@ body{
 
 .Page-Header{
 	background-color: rgb(64,64,64);
-	padding: 25px;
+	padding: 40px;
 	position: relative;
 	padding-bottom:25px;
 	z-index: 1;
+	height: 175px;
 }
 
 .Page-Title{	
@@ -26,12 +27,12 @@ body{
 
 .Header-Main-Title{
 	color: rgb(230,230,230);
-	font-size: 1.25em;
+	font-size: 2em;
 }
 
 .Header-Sub-Title{
 	color: rgb(168,168,168);
-	font-size: .8em;
+	font-size: 1.5em;
 }
 
 .activeL{
