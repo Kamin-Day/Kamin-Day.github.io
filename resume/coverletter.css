@@ -1,0 +1,52 @@
+.Page-Header{
+	background-color: rgb(64,64,64);
+	padding: 25px;
+	position: relative;
+	padding-bottom:25px;
+	z-index: 1;
+}
+
+.Page-Title{	
+	float: left;
+	cursor: pointer;
+}
+
+.Header-Main-Title{
+	color: rgb(230,230,230);
+	font-size: 1.25em;
+}
+
+.Header-Sub-Title{
+	color: rgb(168,168,168);
+	font-size: .8em;
+}
+
+.activeL{
+	transition: color 0.5s ease;
+}
+
+.activeL:hover{
+	color: rgb(108,191,142);
+}
+
+
+
+
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
