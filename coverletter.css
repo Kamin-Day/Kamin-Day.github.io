@@ -18,6 +18,10 @@ a{
 	color:inherit;
 }
 
+li {
+	list-style: none
+}
+
 .Page-Header{
 	background-color: rgb(64,64,64);
 	padding: 30px;
@@ -44,7 +48,8 @@ a{
 .Navigation-Links{
 		display: block;
 		float: right;
-		padding-top: 10px;
+		padding-top: 70px;
+		padding-right: 20px;
 }
 
 .activeL{
@@ -52,7 +57,7 @@ a{
 }
 
 .activeL:hover{
-	color: rgb(108,191,142);
+	color: rgb(119, 211, 239);
 }
 
 .divide{
@@ -61,6 +66,54 @@ a{
     background-color: rgb(244,242,240);
     margin-top:3px;
 }
+
+a.Nav-Link {
+	margin:0 7px;
+	font-weight: bold;
+	color: rgb(244,242,240);
+	font-size: 1.2em;
+}
+
+.Content{
+		padding: 20px;
+		margin:auto;
+		max-width: 900px;
+}
+
+.about{
+	position: relative;
+}
+
+.about h3 {
+	background-color: rgb(186, 236, 255);
+		/*background-color: rgb(195, 215, 247);*/
+	padding: 5px;
+	padding-left:10px;
+	border: solid rgb(7,36,78) 2px;
+
+}
+
+.me{
+	float:left;
+	width:45%;
+}
+
+.me h2{
+	text-align: center;
+}
+
+.you{
+	float:right;
+	width:45%;
+	margin-right: 35px;
+}
+
+.you h2{
+	text-align: center;
+}
+
+
+
 
 
 
