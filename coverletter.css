@@ -23,12 +23,13 @@ li {
 }
 
 .Page-Header{
-	background-color: rgb(64,64,64);
+	background-color: rgb(64, 64, 64);
 	padding: 30px;
 	position: relative;
 	padding-bottom:25px;
 	z-index: 1;
 	height: 175px;
+	box-shadow: 0px 5px 5px rgb(64, 64, 64);
 }
 
 .Page-Title{	
@@ -75,9 +76,13 @@ a.Nav-Link {
 }
 
 .Content{
-		padding: 20px;
-		margin:auto;
-		max-width: 900px;
+	background: white;
+	border-left: black 1px solid;
+	border-right: black 1px solid;
+	border-bottom: black 1px solid;
+	padding: 20px;
+	margin:auto;
+	max-width: 900px;
 }
 
 .about{
