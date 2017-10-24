@@ -19,7 +19,9 @@ My name is Kamin, and I am a web/applications developer from Omaha. I have a kna
 
 
 
+ I enjoy finding creative problems and devising creative solutions while I work to design and implement clean, well documented code. I find the joy for me comes through creating something I can be proud of. Knowing that every detail has been covered by taking the time to go back and make things just right is a key part of that process. 
 
+ I am a quick learner, especially when things interest me. Currently, my experience lies mainly in HTML, CSS, Javascript, DOM manipulation, SQL databases, and Ruby including the Rails and Sinatra Gems. I am familiar with several other technologies, and am currently working to advance my knowledge of C# and the .NET framework.
 
 
 
