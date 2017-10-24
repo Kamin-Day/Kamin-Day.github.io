@@ -10,7 +10,8 @@ body{
 	margin: 0;
 	font-family: 'Oswald', sans-serif;
 /*    font-family: 'Open Sans', sans-serif, "Helvetica", "Arial";
-*/    background: rgb(244,242,240);
+*/   background: rgb(224, 219, 215);
+	/*background: rgb(244,242,240);*/
 }
 
 a{
@@ -75,8 +76,15 @@ a.Nav-Link {
 	font-size: 1.2em;
 }
 
+.Greeting {
+	width: 100%;
+	text-align: center;
+	background-color: white;
+	border: 1px solid black;
+}
+
 .Content{
-	background: white;
+	background: rgb(244,242,240);
 	border-left: black 1px solid;
 	border-right: black 1px solid;
 	border-bottom: black 1px solid;
