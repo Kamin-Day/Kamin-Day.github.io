@@ -29,22 +29,57 @@ My name is Kamin, and I am a web/applications developer from Omaha. I have a kna
 I'm like suppper interestonsdjkvmnsdkfmnskejnf
 
 
+I have completed several semesters at Metropolitan Community College. While there, my course work included various subjects, including horticulture, entrepreneurship, 2D and 3D digital art, and primarily working towards a Bachelors degree in IT, with a focus on Web and Database design.
+
+In the past, I have been employed in various customer service and construction positions with multiple facets each. The highlight of my professional career was my offset press work, working on various highspeed presses as a 2nd Press Operator with Quad Packaging(formerly Specialty Finishing) although I am still recovering from some of the physical demands of the job.
+
+I am an Eagle Scout currently employed by Walmart, working as an Online Grocery Associate.
+
+*
+
+I have always had a great interest and understanding for technological (and other) concepts and tools. I began teaching myself HTML and CSS from online resources sometime around 6th grade, and felt empowered by the learning and challenges I overcame from self-interest endeavors which spurred even deeper intrigue in the uses and possibilities of many different types of technologies and their interactions with countless "fields of study". I enjoy working with my hands and the natural world around us, and combining the digital with the real became overwhelmingly fascinating to me. I was lucky to have a wonderful programming instructor in high school who let me spend extra time in the lab and make use of extra resources at home. His approach to education was far beyond the syntax; I feel he helped me to gain a great understanding of the theory and development of computer science.
+
+Currently I am seeking to re-engage myself in the area. I use basic software constantly. Today it is nearly unavoidable, whether it be for work, entertainment, independent living, learning, etc. The ways these technologies simplify and enhance my life are too numerous to list, but for example, it was a great boon to have the ability to download and install the "Open Office" tools on a fresh PC to complete this application.
+
+*
+
+Why are you applying to Omaha Code School? (We keep every application confidential.)
+
+We appreciate thoughtful and full replies to this question. Please tell us a bit about why you're applying, but also share why you're the kind of person who can persevere in an immersive, rigorous course. What drives you? How do you stay organized and productive?
 
 
 
+I am applying to Omaha Code School simply because it does offer an immersive, rigorous course. I have always been the type of person to engage myself passionately into a project and work tirelessly to bring it not primarily to completion, but to perfection. I see this as one of my best qualities, however it has led to struggles in my career as a student in traditional education. Regardless of the fact that I find great interest in many different approaches and avenues of the world surrounding us, I have never felt satisfied by 'dipping my toes into the water' just to pull them right out and move onto the next thing. In that environment, I felt a great deal of frustration 'trying to meet the needs', where good is good enough, and rarely having an opportunity to surpass expectations. 
+
+The 2 to 4+ year approach to education simply seems too drawn out for me, at this time. The chance to sit and work in a dedicated and focused environment with like-minded individuals, to excel and to become a team is an opportunity that is hard to find. My (limited) exposure to environments like this has always led to great outcomes; this is something I desire in my life, personally. 
+
+As a result of numerous life circumstances, I was unable to continue my personal progression and advancement related to my education and career. I currently work at Walmart, where a newly hired co-worker of mine observed me and suggested that I look into some sort of 'coding boot camp', mentioning your establishment specifically. The suggestion struck me with great interest, and after some research, I see this opportunity as perhaps the best environment to guide me towards the next part of my life and the timing and resources are right.
+
+My drive is fueled by interest, caring, and a passion for good work. As I would avoid wasting a material resource, I avoid wasting a fragment of code. If I were building a home, I would never hire a contractor to build a bedroom with no blueprints or design properties to be expanded upon. To me, the world of code is a place to stay clean, organized, and efficient through my understanding of ongoing and expanding goals.
+
+To conclude my response, I maintain my organization by checking my work and having others check it for me. Consistently be consistent, and communicate well with your tools, hard & software, front and back, the people you work with, and the people working with you.
 
 
+I look forward to discussing this with you further.
+Thank you for your consideration,
+
+Kamin M. Day
 
 
+background: rgb(155,150,149); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(155,150,149,1) 1%, rgba(224,219,215,1) 36%, rgba(125,126,125,1) 99%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(155,150,149,1) 1%,rgba(224,219,215,1) 36%,rgba(125,126,125,1) 99%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(155,150,149,1) 1%,rgba(224,219,215,1) 36%,rgba(125,126,125,1) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9b9695', endColorstr='#7d7e7d',GradientType=0 ); /* IE6-9 */
 
 
+background: rgb(224,219,215); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(224,219,215,1) 36%, rgba(125,126,125,1) 99%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(224,219,215,1) 36%,rgba(125,126,125,1) 99%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(224,219,215,1) 36%,rgba(125,126,125,1) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0dbd7', endColorstr='#7d7e7d',GradientType=0 ); /* IE6-9 */
 
-
-
-
-
-
-
+These days, I like to call myself a developer, but that wasn't always the case. Having done lots of dirty jobs in the past, from pouring concrete in the summers to building roofs in the midst of frigid South Dakota ice rains, I've learned just how important it is to have the tools, teamwork, and knowledge you need to get things done well and make it home in time for dinner.....
 
 
 kaminday@gmail.com

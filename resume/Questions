@@ -1,0 +1,25 @@
+Questions:
+
+1. How can I group the count of distinct schools and group them by the year?
+
+SELECT DISTINCT school_id as school, extract(year from events.date) as year FROM attendances JOIN events ON attendances.event_id = events.id JOIN students ON attendances.student_id = students.id WHERE events.location = 0;
+
+2. Can you offer me an example of how I would be able to convert one of these active record queries to a by location basis?
+
+Attendance.uniq.pluck(:student_id).count
+
+3. How/Where should I display the links to change the Overview view to a certain locations overview?
+
+		  	<td><%= Attendance.uniq.pluck(:student_id).count %></td>
+		  	<td><%= Student.uniq.pluck(:school_id).count %></td>
+
+
+
+4. Note, may have to/be able to redo queries to use Active Record after some goood learnin'
+
+
+
+SELECT year, COUNT(school_id) FROM (SELECT extract(year FROM events.date) AS year, students.school_id FROM events JOIN attendances ON attendances.event_id = events.id JOIN students ON attendances.student_id = students.id WHERE events.location = 0 GROUP BY students.school_id, year) AS years_school_attendances GROUP BY year;
+
+
+SELECT COUNT(DISTINCT attendances.student_id) FROM attendances JOIN events ON events.id = attendances.event_id WHERE events.location = #{location_id};
