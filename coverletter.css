@@ -18,6 +18,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0dbd7', end
 body{
 	margin: 0;
 	font-family: 'Oswald', sans-serif;
+	font-size: 1.2em;
 /*    font-family: 'Open Sans', sans-serif, "Helvetica", "Arial";
 */  /* background: rgb(224, 219, 215)*/
 	/*background: rgb(244,242,240);*/
@@ -26,10 +27,6 @@ body{
 
 
 background: rgb(224,219,215); /* Old browsers */
-background: -moz-linear-gradient(top, rgba(224,219,215,1) 36%, rgba(125,126,125,1) 99%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, rgba(224,219,215,1) 36%,rgba(125,126,125,1) 99%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(224,219,215,1) 36%,rgba(125,126,125,1) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0dbd7', endColorstr='#7d7e7d',GradientType=0 ); /* IE6-9 */
 
 
 
@@ -46,6 +43,17 @@ a{
 
 li {
 	list-style: none
+}
+
+.mobile_links{
+	border: solid black 1px;
+	width:100%;
+	margin:0px;
+	margin-bottom: -10px;
+	margin-top: 5px;
+	text-align: center;
+	padding:10px;
+	background-color:rgb(90, 90, 90);
 }
 
 .Page-Header{
@@ -73,15 +81,12 @@ li {
 }
 
 .Navigation-Links{
-	display: block;
+	display: none;
 	float: right;
 	padding-top: 70px;
 	padding-right: 20px;
 }
 
-#aboutme{
-	color: rgb(119, 211, 239);
-}
 
 .activeL{
 	transition: color 0.5s ease;
@@ -105,22 +110,15 @@ a.Nav-Link {
 	font-size: 1.2em;
 }
 
+#aboutme{
+	color: rgb(119, 211, 239);
+}
 .Greeting {
 	width: 100%;
 	text-align: center;
 	background-color: white;
 	border: 1px solid black;
 	margin-top:5px;
-}
-
-.Content{
-	background: rgb(244,242,240);
-	border-left: black 1px solid;
-	border-right: black 1px solid;
-	border-bottom: black 1px solid;
-	padding: 20px;
-	margin:auto;
-	max-width: 900px;
 }
 
 .about{
@@ -135,55 +133,30 @@ a.Nav-Link {
 	background-color: rgb(64, 64, 64);
 	/*background-color: rgb(186, 236, 255);*/
 		/*background-color: rgb(195, 215, 247);*/
-	padding: 5px;
-	padding-left:10px;
 	border: solid rgb(7,36,78) 2px;
 	color:white;
-
-}
-
-.me{
-	float:left;
-	width:45%;
-}
-
-.me h2{
 	text-align: center;
 }
 
-.me li{
-	/*border-left: 1px solid black;*/
-/*	background-color: white;
-*/}
-
-.me p{
-	margin-left: 8px;
+ul,li { list-style-type: none;
+        list-style-position:inside;
+        margin:0;
+        padding:0;
 }
 
-.you{
-	float:right;
-	width:45%;
-	margin-right: 35px;
+p{
+	margin:25px;
 }
 
-.you h2{
+h2 {
 	text-align: center;
-}
-
-.you li{
-/*	border-left: 1px solid black; */	b
-/*	background-color: white;
-*/
-}
-
-.you p{
-	margin-left: 8px;
+	font-size: 2em;
 }
 
 .Call {
 	background-color: white;
 	border: 1px solid black;
-	width: 50%;
+	width: 75%;
 	text-align: center;
 	margin: 40px auto;
 
@@ -208,6 +181,21 @@ a.Nav-Link {
 	transition: opacity	 0.5s ease;
 }
 
+
+.referral{
+	font-style: italic;
+	margin-left: 5em;
+	margin-right: 5em;
+}
+
+.Examples_Img{
+	width:100%;
+	background: url("../Images/filmstreamsmok.png") no-repeat;
+	height: 200px;
+	background-size: cover;
+	background-position-y: center;
+	margin-left:20px;
+}
 .navThumb:hover{
 	width:25px;
 	opacity: 1.0;
@@ -220,42 +208,252 @@ a.Nav-Link {
 	padding-top:10px;
 }
 
-.Examples{
- 	margin: 0px 40px;
-}
+@media (min-width: 570px) {
+	body{
+		margin: 0;
+		font-family: 'Oswald', sans-serif;
+	/*    font-family: 'Open Sans', sans-serif, "Helvetica", "Arial";
+	*/  /* background: rgb(224, 219, 215)*/
+		/*background: rgb(244,242,240);*/
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0dbd7+36,7d7e7d+99 */
 
-.Examples p{
-/*	background-color: white;
-*/}
 
-.Examples h2{
-	text-align: center;
-}
 
-.Examples_BG{
-	background-color: rgb(64, 64, 64);
-	width:100%;
-}
-.Examples_Img{
-	width:100%;
-	background: url("../Images/filmstreamsmok.png") no-repeat;
-	height: 300px;
-	background-size: cover;
-	background-position-y: center;
-	margin-left:20px;
-	margin-bottom: 5em
-}
+	background: rgb(224,219,215); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(224,219,215,1) 36%, rgba(125,126,125,1) 99%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(224,219,215,1) 36%,rgba(125,126,125,1) 99%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(224,219,215,1) 36%,rgba(125,126,125,1) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0dbd7', endColorstr='#7d7e7d',GradientType=0 ); /* IE6-9 */
 
-.referral{
-	font-style: italic;
-	margin-left: 5em;
-	margin-right: 5em;
+
+
+
+	
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9b9695+1,e0dbd7+36,7d7e7d+99 */
+	}
+
+	a{
+		text-decoration: none;	
+		color:inherit;
+	}
+
+	li {
+		list-style: none
+	}
+
+	.Page-Header{
+		background-color: rgb(64, 64, 64);
+		padding: 30px;
+		position: relative;
+		padding-bottom:25px;
+		z-index: 1;
+		height: 175px;
+		box-shadow: 0px 5px 5px 5px rgb(64, 64, 64);
+	}
+
+	.Page-Title{	
+		float: left;
+	}
+
+	.Header-Main-Title{
+		color: rgb(244,242,240);
+		font-size: 2.25em;
+	}
+
+	.Header-Sub-Title{
+		color: rgb(119, 211, 239);
+		font-size: 2em;
+	}
+
+	.Navigation-Links{
+		display: block;
+		float: right;
+		padding-top: 70px;
+		padding-right: 20px;
+	}
+	.mobile_links{
+		display:none;
+		
+	}
+
+	#aboutme{
+		color: rgb(119, 211, 239);
+	}
+
+	.activeL{
+		transition: color 0.5s ease;
+	}
+
+	.activeL:hover{
+		color: rgb(119, 211, 239);
+	}
+
+	.divide{
+	    width: 100%;
+	    height: 2px;
+	    background-color: rgb(244,242,240);
+	    margin-top:3px;
+	}
+
+	a.Nav-Link {
+		margin:0 7px;
+		font-weight: bold;
+		color: rgb(244,242,240);
+		font-size: 1.2em;
+	}
+
+	.Greeting {
+		width: 100%;
+		text-align: center;
+		background-color: white;
+		border: 1px solid black;
+		margin-top:5px;
+	}
+
+	.Content{
+		background: rgb(244,242,240);
+		border-left: black 1px solid;
+		border-right: black 1px solid;
+		border-bottom: black 1px solid;
+		padding: 20px;
+		margin:auto;
+		max-width: 900px;
+	}
+
+	.about{
+		position: relative;
+	}
+
+	.about h2{
+		
+	}
+
+	.about h3 {
+		background-color: rgb(64, 64, 64);
+		/*background-color: rgb(186, 236, 255);*/
+			/*background-color: rgb(195, 215, 247);*/
+		padding: 5px;
+		padding-left:10px;
+		border: solid rgb(7,36,78) 2px;
+		color:white;
+	}
+
+	.me{
+		float:left;
+		width:45%;
+	}
+
+	.me h2{
+		text-align: center;
+	}
+
+	.me li{
+		/*border-left: 1px solid black;*/
+	/*	background-color: white;
+	*/}
+
+	.me p{
+		margin-left: 8px;
+	}
+
+	.you{
+		float:right;
+		width:45%;
+		margin-right: 35px;
+	}
+
+	.you h2{
+		text-align: center;
+	}
+
+	.you li{
+	/*	border-left: 1px solid black; */	b
+	/*	background-color: white;
+	*/
+	}
+
+	.you p{
+		margin-left: 8px;
+	}
+
+	.Call {
+		background-color: white;
+		border: 1px solid black;
+		width: 50%;
+		text-align: center;
+		margin: 40px auto;
+
+	}
+
+	.Call h1{
+		width:100%;
+		border-bottom: 1px black solid;
+		margin: 5px 0px;
+		padding-bottom:5px;
+	}
+
+	.Call table{
+		margin:auto;
+	}
+
+	.navThumb{
+		width:25px;
+		opacity: 0.25;
+	    filter: alpha(opacity=25);
+		margin-right:7px;
+		transition: opacity	 0.5s ease;
+	}
+
+	.navThumb:hover{
+		width:25px;
+		opacity: 1.0;
+		filter:none;
+	}
+
+	.wide-buttons{
+		text-align: center;
+		display: block;
+		padding-top:10px;
+	}
+
+	.Examples{
+	 	margin: 0px 40px;
+	}
+
+	.Examples p{
+	/*	background-color: white;
+	*/}
+
+	.Examples h2{
+		text-align: center;
+	}
+
+	.Examples_BG{
+		background-color: rgb(64, 64, 64);
+		width:100%;
+	}
+	.Examples_Img{
+		width:100%;
+		background: url("../Images/filmstreamsmok.png") no-repeat;
+		height: 300px;
+		background-size: cover;
+		background-position-y: center;
+		margin-left:20px;
+		margin-bottom: 5em
+	}
+
+	.referral{
+		font-style: italic;
+		margin-left: 5em;
+		margin-right: 5em;
+	}
+	.resume {
+		margin-top: 5px;
+	}
+
 
 }
-.resume {
-	margin-top: 5px;
-}
-
 
 
 .cf:before,
