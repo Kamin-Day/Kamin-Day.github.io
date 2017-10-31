@@ -357,6 +357,22 @@ h2 {
 		margin-left: 8px;
 	}
 
+	.mewide{
+		
+	}
+
+	.mewide h2{
+		text-align: center;
+	}
+
+	.mewide li{
+		/*border-left: 1px solid black;*/
+	/*	background-color: white;
+	*/}
+
+	.mewide p{
+		margin-left: 8px;
+	}
 	.you{
 		float:right;
 		width:45%;
